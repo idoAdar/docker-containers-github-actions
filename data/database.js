@@ -6,9 +6,9 @@ const dbUser = process.env.MONGODB_USERNAME;
 const dbPassword = process.env.MONGODB_PASSWORD;
 const dbName = process.env.MONGODB_DB_NAME;
 
-const uri = `${connectionProtocol}://${dbUser}:${dbPassword}@${clusterAddress}/`;
+const uri = `${connectionProtocol}://${dbUser}:${dbPassword}${clusterAddress}/`;
 const client = new MongoClient(uri);
-// mongodb+srv://idox2x:<password>@cluster0.49oji3j.mongodb.net/
+
 console.log('Trying to connect to db');
 
 try {
